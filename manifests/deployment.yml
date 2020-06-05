@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: anilsiribcpwmsservicediscovery 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: anilsiribcpwmsservicediscovery 
+    spec:
+      containers:
+        - name: anilsiribcpwmsservicediscovery 
+          image: cicdanilsiricr.azurecr.io/anilsiribcpwmsservicediscovery
+          ports:
+          - containerPort: 80
